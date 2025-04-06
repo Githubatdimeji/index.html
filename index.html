@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Spa & Massage</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4f7d9e',secondary:'#8fb3a9'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.1) 100%), url('https://public.readdy.ai/ai/img_res/b591fef7d39733beef66cf6d36715340.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #4f7d9e;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active::after {
+            width: 100%;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .custom-checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .custom-checkbox.checked {
+            background-color: #4f7d9e;
+            border-color: #4f7d9e;
+        }
+        .custom-checkbox.checked::after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .custom-radio {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .custom-radio.checked {
+            border-color: #4f7d9e;
+        }
+        .custom-radio.checked::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            background-color: #4f7d9e;
+            border-radius: 50%;
+        }
+        .custom-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .custom-switch-track {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e2e8f0;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .custom-switch-thumb {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        .custom-switch.checked .custom-switch-track {
+            background-color: #4f7d9e;
+        }
+        .custom-switch.checked .custom-switch-thumb {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+<header class="fixed w-full z-50 transition-all duration-300" id="header" role="banner">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary" aria-label="Serenity Spa & Massage Home">logo</a>
+            <nav class="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-link active text-gray-800 hover:text-primary transition-colors" aria-current="page">Home</a>
+                <a href="#services" class="nav-link text-gray-800 hover:text-primary transition-colors">Services</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">About Us</a>
+                <a href="#testimonials" class="nav-link text-gray-800 hover:text-primary transition-colors">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="#booking" class="hidden md:inline-block bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap" role="button">Book Now</a>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" aria-label="Open menu" aria-expanded="false">
+                <i class="ri-menu-line ri-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section w-full min-h-screen flex items-center">
+        <div class="container mx-auto px-6 py-20 w-full">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Experience Ultimate Relaxation</h1>
+                <p class="text-lg text-gray-700 mb-8">Indulge in our premium massage therapies designed to rejuvenate your body, mind, and spirit. Our skilled therapists will help you escape the stresses of everyday life.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#booking" class="bg-primary text-white px-8 py-3.5 !rounded-button font-medium hover:bg-opacity-90 transition-all text-center whitespace-nowrap">Book Your Session</a>
+                    <a href="#services" class="border-2 border-primary text-primary px-8 py-3.5 !rounded-button font-medium hover:bg-primary hover:text-white transition-all text-center whitespace-nowrap">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Signature Treatments</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our range of specialized massage therapies tailored to your specific needs and preferences.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/a25bca329a3bb5bfd3adfee14535fc59.jpg" alt="Swedish Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Swedish Massage</h3>
+                            <span class="text-primary font-medium">From $85</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A gentle, relaxing massage that uses long strokes, kneading, and circular movements to ease tension and promote relaxation.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">60 / 90 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/3234182e16e8550a1dcf9d82fc232778.jpg" alt="Deep Tissue Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Deep Tissue Massage</h3>
+                            <span class="text-primary font-medium">From $95</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Targets the deeper layers of muscle and connective tissue to release chronic tension and pain patterns.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">60 / 90 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/58ae1dcc5377610d4c6069bb611f9d09.jpg" alt="Hot Stone Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Hot Stone Massage</h3>
+                            <span class="text-primary font-medium">From $110</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Combines heated stones with massage techniques to melt away tension and improve circulation.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">75 / 90 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/4a31d685d2e29502234aa7d76de35a87.jpg" alt="Aromatherapy Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Aromatherapy Massage</h3>
+                            <span class="text-primary font-medium">From $95</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Enhances the massage experience with essential oils to promote relaxation, energize, or balance your mood.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">60 / 90 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/10dafaf8cfe211fb9b96db56b2564508.jpg" alt="Prenatal Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Prenatal Massage</h3>
+                            <span class="text-primary font-medium">From $90</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Specially designed for expectant mothers to reduce stress, decrease swelling, and relieve aches and pains.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">60 / 75 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/e5c6b20497f51948a72984ef0ef7711d.jpg" alt="Couples Massage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Couples Massage</h3>
+                            <span class="text-primary font-medium">From $180</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Share the relaxation experience with a partner, friend, or family member in our specially designed couples room.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">60 / 90 min</span>
+                            <a href="#booking" class="text-primary font-medium flex items-center">
+                                Book Now
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/7234133e5f824ad998157d0fffc963bb.jpg" alt="About Our Spa" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Experience Tranquility Like Never Before</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2010, Serenity Spa & Massage has been dedicated to providing exceptional massage therapy services in a peaceful and luxurious environment. Our team of highly skilled and certified therapists is committed to helping you achieve optimal wellness through the healing power of touch.</p>
+                    <p class="text-gray-600 mb-8">We believe in a holistic approach to wellness, addressing not just physical tension but also promoting mental and emotional balance. Each treatment is personalized to meet your specific needs and preferences, ensuring a truly transformative experience.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-medal-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Certified Experts</h4>
+                                <p class="text-sm text-gray-600">Licensed professionals</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-heart-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Personalized Care</h4>
+                                <p class="text-sm text-gray-600">Tailored treatments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-leaf-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Natural Products</h4>
+                                <p class="text-sm text-gray-600">Organic oils & essences</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-time-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">15+ Years</h4>
+                                <p class="text-sm text-gray-600">Of excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Special Offers</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Take advantage of our limited-time promotions and packages designed to enhance your spa experience.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Offer 1 -->
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://public.readdy.ai/ai/img_res/cb5d4c70e6c5cff578c3ea7dc8d80daa.jpg" alt="First Time Special" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">20% OFF</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">First-Time Client Special</h3>
+                        <p class="text-gray-600 mb-4">Enjoy 20% off your first massage session with us. Experience our premium services at a special introductory rate.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Valid until April 30, 2025</span>
+                            <a href="#booking" class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer 2 -->
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://public.readdy.ai/ai/img_res/b34b292dc37b5213b649f10e8afa63f1.jpg" alt="Couples Retreat" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">PACKAGE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Couples Retreat Package</h3>
+                        <p class="text-gray-600 mb-4">90-minute couples massage, complimentary champagne, and aromatherapy enhancement for a perfect shared experience.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">$250 per couple</span>
+                            <a href="#booking" class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer 3 -->
+                <div class="bg-white rounded shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://public.readdy.ai/ai/img_res/65691c76779a3e48c4af7cafe63f9fff.jpg" alt="Membership Program" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">SAVE 15%</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Membership</h3>
+                        <p class="text-gray-600 mb-4">Join our membership program and receive one 60-minute massage per month plus exclusive discounts on additional services.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">$75/month (12-month commitment)</span>
+                            <a href="#booking" class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Booking Section -->
+    <section id="booking" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Book Your Massage Session</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Complete the form below to schedule your appointment and secure your spot for a rejuvenating experience.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <!-- Booking Form -->
+                <div class="lg:w-2/3 bg-white rounded-lg shadow-md p-8">
+                    <div class="flex mb-8">
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full">1</div>
+                            <div class="text-sm font-medium text-gray-700 mt-2">Service</div>
+                        </div>
+                        <div class="flex-1 mx-4 pt-5">
+                            <div class="h-0.5 bg-gray-300 relative">
+                                <div class="absolute left-0 top-0 h-full w-full bg-primary"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">2</div>
+                            <div class="text-sm font-medium text-gray-500 mt-2">Details</div>
+                        </div>
+                        <div class="flex-1 mx-4 pt-5">
+                            <div class="h-0.5 bg-gray-300"></div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">3</div>
+                            <div class="text-sm font-medium text-gray-500 mt-2">Address</div>
+                        </div>
+                        <div class="flex-1 mx-4 pt-5">
+                            <div class="h-0.5 bg-gray-300"></div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">4</div>
+                            <div class="text-sm font-medium text-gray-500 mt-2">Payment</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 1: Service Selection (Visible) -->
+                    <div id="step1" class="booking-step">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Select Your Service</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Massage Type</label>
+                            <div class="relative">
+                                <select id="massageType" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                    <option value="">Select a massage type</option>
+                                    <option value="swedish">Swedish Massage</option>
+                                    <option value="deep">Deep Tissue Massage</option>
+                                    <option value="hot">Hot Stone Massage</option>
+                                    <option value="aroma">Aromatherapy Massage</option>
+                                    <option value="prenatal">Prenatal Massage</option>
+                                    <option value="couples">Couples Massage</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Duration</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="relative">
+                                    <input type="radio" id="duration60" name="duration" value="60" class="absolute opacity-0">
+                                    <label for="duration60" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
+                                        60 Minutes
+                                    </label>
+                                </div>
+                                <div class="relative">
+                                    <input type="radio" id="duration75" name="duration" value="75" class="absolute opacity-0">
+                                    <label for="duration75" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
+                                        75 Minutes
+                                    </label>
+                                </div>
+                                <div class="relative">
+                                    <input type="radio" id="duration90" name="duration" value="90" class="absolute opacity-0">
+                                    <label for="duration90" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
+                                        90 Minutes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Date</label>
+                                <input type="date" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" min="2025-04-07">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Time</label>
+                                <div class="relative">
+                                    <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                        <option value="">Select a time</option>
+                                        <option>9:00 AM</option>
+                                        <option>10:00 AM</option>
+                                        <option>11:00 AM</option>
+                                        <option>12:00 PM</option>
+                                        <option>1:00 PM</option>
+                                        <option>2:00 PM</option>
+                                        <option>3:00 PM</option>
+                                        <option>4:00 PM</option>
+                                        <option>5:00 PM</option>
+                                        <option>6:00 PM</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-gray-700 font-medium mb-2">Number of People</label>
+                            <div class="relative w-32">
+                                <button type="button" class="absolute left-0 top-0 h-full w-10 flex items-center justify-center text-gray-600 border-r border-gray-300" onclick="decrementPeople()">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" id="peopleCount" class="w-full px-10 py-3 bg-gray-50 border border-gray-300 rounded text-center text-gray-700" value="1" min="1" max="2">
+                                <button type="button" class="absolute right-0 top-0 h-full w-10 flex items-center justify-center text-gray-600 border-l border-gray-300" onclick="incrementPeople()">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button type="button" onclick="nextStep(2)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                                Continue to Personal Details
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Personal Details (Hidden) -->
+                    <div id="step2" class="booking-step hidden">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Personal Information</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your first name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-gray-700 font-medium mb-2">Special Requests or Notes</label>
+                            <textarea class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 h-32" placeholder="Any specific preferences, health concerns, or requests?"></textarea>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep(1)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                                <i class="ri-arrow-left-line mr-1"></i>
+                                Back to Services
+                            </button>
+                            <button type="button" onclick="nextStep(3)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                                Continue to Address
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Address Details (Hidden) -->
+                    <div id="step3" class="booking-step hidden">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Address Information</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Street Address</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your street address">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Apartment, Suite, etc. (optional)</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Apt, Suite, Unit, etc.">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">City</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your city">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">State/Province</label>
+                                <div class="relative">
+                                    <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                        <option value="">Select state</option>
+                                        <option>California</option>
+                                        <option>New York</option>
+                                        <option>Texas</option>
+                                        <option>Florida</option>
+                                        <option>Illinois</option>
+                                        <!-- More states would be here -->
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">ZIP/Postal Code</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your ZIP code">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-gray-700 font-medium mb-2">Country</label>
+                            <div class="relative">
+                                <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <!-- More countries would be here -->
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep(2)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                                <i class="ri-arrow-left-line mr-1"></i>
+                                Back to Personal Details
+                            </button>
+                            <button type="button" onclick="nextStep(4)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                                Continue to Payment
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Payment Information (Hidden) -->
+                    <div id="step4" class="booking-step hidden">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Payment Information</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Payment Method</label>
+                            <div class="grid grid-cols-4 gap-4">
+                                <div class="relative">
+                                    <input type="radio" id="cardVisa" name="paymentMethod" value="visa" class="absolute opacity-0">
+                                    <label for="cardVisa" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
+                                        <i class="ri-visa-fill ri-lg text-blue-600"></i>
+                                    </label>
+                                </div>
+                                <div class="relative">
+                                    <input type="radio" id="cardMastercard" name="paymentMethod" value="mastercard" class="absolute opacity-0">
+                                    <label for="cardMastercard" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
+                                        <i class="ri-mastercard-fill ri-lg text-orange-600"></i>
+                                    </label>
+                                </div>
+                                <div class="relative">
+                                    <input type="radio" id="cardAmex" name="paymentMethod" value="amex" class="absolute opacity-0">
+                                    <label for="cardAmex" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
+                                        <i class="ri-bank-card-fill ri-lg text-blue-800"></i>
+                                    </label>
+                                </div>
+                                <div class="relative">
+                                    <input type="radio" id="cardPaypal" name="paymentMethod" value="paypal" class="absolute opacity-0">
+                                    <label for="cardPaypal" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
+                                        <i class="ri-paypal-fill ri-lg text-blue-700"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Card Number</label>
+                            <div class="relative">
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 pl-12" placeholder="1234 5678 9012 3456">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                    <i class="ri-bank-card-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Expiration Date</label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="relative">
+                                        <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                            <option value="">Month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                            <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                        </div>
+                                    </div>
+                                    <div class="relative">
+                                        <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
+                                            <option value="">Year</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                            <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Security Code (CVV)</label>
+                                <div class="relative">
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 pl-12" placeholder="123" maxlength="4">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                        <i class="ri-lock-line text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-gray-700 font-medium mb-2">Name on Card</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter the name on your card">
+                        </div>
+                        
+                        <div class="flex items-center mb-8">
+                            <div class="custom-checkbox" id="saveCardCheckbox" onclick="toggleCheckbox(this)"></div>
+                            <label for="saveCardCheckbox" class="ml-2 text-gray-700 cursor-pointer">Save my payment information for future bookings</label>
+                        </div>
+                        
+                        <div class="mb-8 p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-shield-check-line text-green-600 mr-2"></i>
+                                <span class="text-gray-700 font-medium">Secure Payment</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Your payment information is encrypted and secure. We never store your full credit card details.</p>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep(3)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                                <i class="ri-arrow-left-line mr-1"></i>
+                                Back to Address
+                            </button>
+                            <button type="button" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                                Complete Booking
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Booking Summary</h3>
+                        
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">Swedish Massage</span>
+                                <span class="text-gray-900 font-medium">$85.00</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mb-2">60 Minutes</div>
+                            <div class="text-sm text-gray-600">April 10, 2025 at 2:00 PM</div>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600">Subtotal</span>
+                                <span class="text-gray-900">$85.00</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600">Tax</span>
+                                <span class="text-gray-900">$6.80</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-gray-900 font-bold">Total</span>
+                            <span class="text-primary text-xl font-bold">$91.80</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Promo Code</label>
+                            <div class="flex">
+                                <input type="text" class="flex-1 px-4 py-3 bg-gray-50 border border-gray-300 rounded-l text-gray-700" placeholder="Enter promo code">
+                                <button class="bg-gray-200 text-gray-700 px-4 py-3 rounded-r font-medium hover:bg-gray-300 transition-all whitespace-nowrap">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                            <div class="flex items-center">
+                                <i class="ri-shield-check-line text-green-600 mr-1"></i>
+                                <span>Secure checkout</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-calendar-check-line text-green-600 mr-1"></i>
+                                <span>Free cancellation (24h)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-center space-x-3">
+                            <i class="ri-visa-fill ri-lg text-blue-600"></i>
+                            <i class="ri-mastercard-fill ri-lg text-orange-600"></i>
+                            <i class="ri-paypal-fill ri-lg text-blue-700"></i>
+                            <i class="ri-bank-card-fill ri-lg text-blue-800"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hear from our satisfied clients about their experiences at Serenity Spa & Massage.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The deep tissue massage I received was exactly what I needed. My therapist, Rebecca, was attentive to my problem areas and applied the perfect amount of pressure. I left feeling completely renewed."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center text-primary font-medium">JD</div>
+                        <div class="ml-3">
+                            <h4 class="font-medium text-gray-900">Jennifer Davis</h4>
+                            <p class="text-sm text-gray-500">March 15, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"My husband and I enjoyed the couples massage for our anniversary. The ambiance was perfect, and the therapists were professional and skilled. We'll definitely be back for another session soon!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center text-primary font-medium">MR</div>
+                        <div class="ml-3">
+                            <h4 class="font-medium text-gray-900">Michael Robinson</h4>
+                            <p class="text-sm text-gray-500">February 28, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I've been coming to Serenity Spa monthly for over a year now. Their membership program is an excellent value, and the consistent quality of their massages keeps me coming back. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center text-primary font-medium">AW</div>
+                        <div class="ml-3">
+                            <h4 class="font-medium text-gray-900">Amanda Wilson</h4>
+                            <p class="text-sm text-gray-500">March 22, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions about our services or want to schedule an appointment? Contact us using the form or the information below.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Our Location</h4>
+                                <p class="text-gray-600">123 Relaxation Avenue<br>San Francisco, CA 94103</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 shrink-0">
+                                <i class="ri-time-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Business Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9am - 8pm<br>Saturday - Sunday: 10am - 6pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 shrink-0">
+                                <i class="ri-phone-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Phone Number</h4>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 shrink-0">
+                                <i class="ri-mail-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Email Address</h4>
+                                <p class="text-gray-600">info@serenityspa.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-medium text-gray-900 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                <i class="ri-pinterest-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your first name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter message subject">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 h-32" placeholder="Type your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full relative overflow-hidden">
+        <div class="absolute inset-0" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-position: center; background-size: cover;"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">logo</a>
+                    <p class="text-gray-400 mb-6">Experience the ultimate in relaxation and rejuvenation at our premium massage spa, where skilled therapists and serene surroundings combine to create a truly transformative experience.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-pinterest-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#booking" class="text-gray-400 hover:text-white transition-colors">Book Now</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Swedish Massage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Deep Tissue Massage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hot Stone Massage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Aromatherapy Massage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Prenatal Massage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Couples Massage</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for special offers and updates.</p>
+                    <div class="flex mb-4">
+                        <input type="email" class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l text-white" placeholder="Your email address">
+                        <button class="bg-primary text-white px-4 py-3 rounded-r font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Subscribe</button>
+                    </div>
+                    <p class="text-sm text-gray-500">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Serenity Spa & Massage. All rights reserved.</p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white', 'shadow-md');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-white', 'shadow-md');
+                header.classList.add('bg-transparent');
+            }
+        });
+        
+        // Booking form steps
+        function nextStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.booking-step').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Show the requested step
+            document.getElementById('step' + step).classList.remove('hidden');
+            
+            // Update progress indicators
+            updateProgress(step);
+        }
+        
+        function prevStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.booking-step').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Show the requested step
+            document.getElementById('step' + step).classList.remove('hidden');
+            
+            // Update progress indicators
+            updateProgress(step);
+        }
+        
+        function updateProgress(currentStep) {
+            // Reset all steps
+            const steps = document.querySelectorAll('.flex-col.items-center');
+            const progressBars = document.querySelectorAll('.h-0\\.5.bg-gray-300');
+            
+            for (let i = 0; i < steps.length; i++) {
+                const step = steps[i];
+                const stepNumber = i + 1;
+                
+                if (stepNumber < currentStep) {
+                    // Completed steps
+                    step.querySelector('div:first-child').classList.remove('bg-gray-200', 'text-gray-600');
+                    step.querySelector('div:first-child').classList.add('bg-primary', 'text-white');
+                    step.querySelector('div:last-child').classList.remove('text-gray-500');
+                    step.querySelector('div:last-child').classList.add('text-gray-700');
+                    
+                    if (i < progressBars.length) {
+                        progressBars[i].firstElementChild.classList.add('bg-primary');
+                    }
+                } else if (stepNumber === currentStep) {
+                    // Current step
+                    step.querySelector('div:first-child').classList.remove('bg-gray-200', 'text-gray-600');
+                    step.querySelector('div:first-child').classList.add('bg-primary', 'text-white');
+                    step.querySelector('div:last-child').classList.remove('text-gray-500');
+                    step.querySelector('div:last-child').classList.add('text-gray-700');
+                    
+                    if (i < progressBars.length) {
+                        progressBars[i].firstElementChild.classList.remove('bg-primary');
+                    }
+                } else {
+                    // Future steps
+                    step.querySelector('div:first-child').classList.remove('bg-primary', 'text-white');
+                    step.querySelector('div:first-child').classList.add('bg-gray-200', 'text-gray-600');
+                    step.querySelector('div:last-child').classList.remove('text-gray-700');
+                    step.querySelector('div:last-child').classList.add('text-gray-500');
+                    
+                    if (i < progressBars.length) {
+                        progressBars[i].firstElementChild.classList.remove('bg-primary');
+                    }
+                }
+            }
+        }
+        
+        // People counter
+        function incrementPeople() {
+            const input = document.getElementById('peopleCount');
+            const currentValue = parseInt(input.value);
+            if (currentValue < parseInt(input.max)) {
+                input.value = currentValue + 1;
+            }
+        }
+        
+        function decrementPeople() {
+            const input = document.getElementById('peopleCount');
+            const currentValue = parseInt(input.value);
+            if (currentValue > parseInt(input.min)) {
+                input.value = currentValue - 1;
+            }
+        }
+        
+        // Custom form controls
+        function toggleCheckbox(element) {
+            element.classList.toggle('checked');
+        }
+        
+        // Initialize radio buttons
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Reset all labels in the same group
+                const name = this.getAttribute('name');
+                document.querySelectorAll(`input[name="${name}"] + label`).forEach(label => {
+                    label.classList.remove('border-primary', 'bg-primary', 'bg-opacity-5');
+                });
+                
+                // Style the selected label
+                if (this.checked) {
+                    this.nextElementSibling.classList.add('border-primary', 'bg-primary', 'bg-opacity-5');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
