@@ -39,19 +39,33 @@
     from { opacity: 0; transform: translateX(20px); }
     to { opacity: 1; transform: translateX(0); }
 }
-
-/* Form validation styles */
-input.invalid, select.invalid {
-    border-color: #e53e3e !important;
+/* General Form Styles */
+form {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Loading state */
-button[disabled] {
-    opacity: 0.7;
-    cursor: not-allowed;
+/* Form Headings */
+form h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4f7d9e;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-/* Smooth scroll target padding */
-section {
-    scroll-margin-top: 80px;
+/* Form Labels */
+form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
 }
+
