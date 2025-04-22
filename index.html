@@ -415,382 +415,203 @@
             </div>
         </div>
     </section>
-    <!-- Booking Section -->
-    <section id="booking" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+   
+      
+        <section id="booking" class="py-20">
+            <div class="container mx-auto px-6">
+              <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Book Your Massage Session</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">Complete the form below to schedule your appointment and secure your spot for a rejuvenating experience.</p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row gap-10">
+              </div>
+          
+              <div class="flex flex-col lg:flex-row gap-10">
                 <!-- Booking Form -->
                 <div class="lg:w-2/3 bg-white rounded-lg shadow-md p-8">
-                    <div class="flex mb-8">
-                        <div class="flex flex-col items-center">
-                            <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full">1</div>
-                            <div class="text-sm font-medium text-gray-700 mt-2">Service</div>
-                        </div>
-                        <div class="flex-1 mx-4 pt-5">
-                            <div class="h-0.5 bg-gray-300 relative">
-                                <div class="absolute left-0 top-0 h-full w-full bg-primary"></div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">2</div>
-                            <div class="text-sm font-medium text-gray-500 mt-2">Details</div>
-                        </div>
-                        <div class="flex-1 mx-4 pt-5">
-                            <div class="h-0.5 bg-gray-300"></div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">3</div>
-                            <div class="text-sm font-medium text-gray-500 mt-2">Address</div>
-                        </div>
-                        <div class="flex-1 mx-4 pt-5">
-                            <div class="h-0.5 bg-gray-300"></div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">4</div>
-                            <div class="text-sm font-medium text-gray-500 mt-2">Payment</div>
-                        </div>
+                  <!-- Progress Bar -->
+                  <div class="flex mb-8">
+                    <div class="flex flex-col items-center">
+                      <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full">1</div>
+                      <div class="text-sm font-medium text-gray-700 mt-2">Service</div>
                     </div>
-                    
-                    <!-- Step 1: Service Selection (Visible) -->
-                    <div id="step1" class="booking-step">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Select Your Service</h3>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Massage Type</label>
-                            <div class="relative">
-                                <select id="massageType" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                    <option value="">Select a massage type</option>
-                                    <option value="swedish">Swedish Massage</option>
-                                    <option value="deep">Deep Tissue Massage</option>
-                                    <option value="hot">Hot Stone Massage</option>
-                                    <option value="aroma">Aromatherapy Massage</option>
-                                    <option value="prenatal">Prenatal Massage</option>
-                                    <option value="couples">Couples Massage</option>
-                                </select>
-                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Duration</label>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="relative">
-                                    <input type="radio" id="duration60" name="duration" value="60" class="absolute opacity-0">
-                                    <label for="duration60" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
-                                        60 Minutes
-                                    </label>
-                                </div>
-                                <div class="relative">
-                                    <input type="radio" id="duration75" name="duration" value="75" class="absolute opacity-0">
-                                    <label for="duration75" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
-                                        75 Minutes
-                                    </label>
-                                </div>
-                                <div class="relative">
-                                    <input type="radio" id="duration90" name="duration" value="90" class="absolute opacity-0">
-                                    <label for="duration90" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary">
-                                        90 Minutes
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Date</label>
-                                <input type="date" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" min="2025-04-07">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Time</label>
-                                <div class="relative">
-                                    <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                        <option value="">Select a time</option>
-                                        <option>9:00 AM</option>
-                                        <option>10:00 AM</option>
-                                        <option>11:00 AM</option>
-                                        <option>12:00 PM</option>
-                                        <option>1:00 PM</option>
-                                        <option>2:00 PM</option>
-                                        <option>3:00 PM</option>
-                                        <option>4:00 PM</option>
-                                        <option>5:00 PM</option>
-                                        <option>6:00 PM</option>
-                                    </select>
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <label class="block text-gray-700 font-medium mb-2">Number of People</label>
-                            <div class="relative w-32">
-                                <button type="button" class="absolute left-0 top-0 h-full w-10 flex items-center justify-center text-gray-600 border-r border-gray-300" onclick="decrementPeople()">
-                                    <i class="ri-subtract-line"></i>
-                                </button>
-                                <input type="number" id="peopleCount" class="w-full px-10 py-3 bg-gray-50 border border-gray-300 rounded text-center text-gray-700" value="1" min="1" max="2">
-                                <button type="button" class="absolute right-0 top-0 h-full w-10 flex items-center justify-center text-gray-600 border-l border-gray-300" onclick="incrementPeople()">
-                                    <i class="ri-add-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-end">
-                            <button type="button" onclick="nextStep(2)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
-                                Continue to Personal Details
-                                <i class="ri-arrow-right-line ml-1"></i>
-                            </button>
-                        </div>
+                    <div class="flex-1 mx-4 pt-5">
+                      <div class="h-0.5 bg-gray-300 relative">
+                        <div class="absolute left-0 top-0 h-full w-full bg-primary"></div>
+                      </div>
                     </div>
-                    
-                    <!-- Step 2: Personal Details (Hidden) -->
+                    <div class="flex flex-col items-center">
+                      <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">2</div>
+                      <div class="text-sm font-medium text-gray-500 mt-2">Details</div>
+                    </div>
+                    <div class="flex-1 mx-4 pt-5">
+                      <div class="h-0.5 bg-gray-300"></div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">3</div>
+                      <div class="text-sm font-medium text-gray-500 mt-2">Address</div>
+                    </div>
+                    <div class="flex-1 mx-4 pt-5">
+                      <div class="h-0.5 bg-gray-300"></div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">4</div>
+                      <div class="text-sm font-medium text-gray-500 mt-2">Payment</div>
+                    </div>
+                  </div>
+          
+<form id="booking-form" action="https://formsubmit.co/syusoladimeji2008@gmail.com" method="POST" onsubmit="return validateCardNumber()" aria-label="Booking form">
+                    <!-- Step 1: Booking Details -->
+                    <div id="step1" class="booking-step" role="region" aria-labelledby="step1-header">
+                      <h3 id="step1-header" class="text-xl font-bold text-gray-900 mb-6">Booking Details</h3>
+                      <label for="service" class="block text-gray-700 font-medium mb-2">Service</label>
+                      <select id="service" name="service" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4 appearance-none" required aria-required="true" aria-describedby="service-help">
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="Swedish Massage">Swedish Massage</option>
+                        <option value="Deep Tissue Massage">Deep Tissue Massage</option>
+                        <option value="Hot Stone Massage">Hot Stone Massage</option>
+                        <option value="Aromatherapy Massage">Aromatherapy Massage</option>
+                        <option value="Prenatal Massage">Prenatal Massage</option>
+                        <option value="Couples Massage">Couples Massage</option>
+                      </select>
+                      <p id="service-help" class="text-sm text-gray-500 mb-4">Choose the massage service you want to book.</p>
+          
+                      <label for="duration" class="block text-gray-700 font-medium mb-2">Duration</label>
+                      <select id="duration" name="duration" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4 appearance-none" required aria-required="true" aria-describedby="duration-help">
+                        <option value="" disabled selected>Select duration</option>
+                        <option value="60 Minutes">60 Minutes</option>
+                        <option value="75 Minutes">75 Minutes</option>
+                        <option value="90 Minutes">90 Minutes</option>
+                      </select>
+                      <p id="duration-help" class="text-sm text-gray-500 mb-4">Select how long your session will last.</p>
+          
+                      <label for="date" class="block text-gray-700 font-medium mb-2">Date</label>
+                      <input type="date" id="date" name="date" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required aria-required="true" aria-describedby="date-help">
+                      <p id="date-help" class="text-sm text-gray-500 mb-4">Choose your preferred appointment date.</p>
+          
+                      <label for="time" class="block text-gray-700 font-medium mb-2">Time</label>
+                      <select id="time" name="time" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4 appearance-none" required aria-required="true" aria-describedby="time-help">
+                        <option value="" disabled selected>Select a time</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                      </select>
+                      <p id="time-help" class="text-sm text-gray-500 mb-4">Select your preferred appointment time.</p>
+          
+                      <label for="people" class="block text-gray-700 font-medium mb-2">Number of People</label>
+                      <input type="number" id="people" name="people" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-6" min="1" max="2" value="1" required aria-required="true" aria-describedby="people-help">
+                      <p id="people-help" class="text-sm text-gray-500 mb-6">Enter the number of people for the session (1 or 2).</p>
+          
+                      <div class="flex justify-end">
+                        <button type="button" onclick="nextStep(2)" class="bg-primary text-white px-6 py-3 rounded font-medium hover:bg-opacity-90 transition-all whitespace-nowrap" aria-label="Continue to Personal Details">
+                          Continue to Personal Details
+                          <i class="ri-arrow-right-line ml-1"></i>
+                        </button>
+                      </div>
+                    </div>
+          
+                    <!-- Step 2: Personal Details -->
                     <div id="step2" class="booking-step hidden">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Personal Information</h3>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">First Name</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your first name">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Last Name</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your last name">
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
-                                <input type="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your email">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your phone number">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <label class="block text-gray-700 font-medium mb-2">Special Requests or Notes</label>
-                            <textarea class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 h-32" placeholder="Any specific preferences, health concerns, or requests?"></textarea>
-                        </div>
-                        
-                        <div class="flex justify-between">
-                            <button type="button" onclick="prevStep(1)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
-                                <i class="ri-arrow-left-line mr-1"></i>
-                                Back to Services
-                            </button>
-                            <button type="button" onclick="nextStep(3)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
-                                Continue to Address
-                                <i class="ri-arrow-right-line ml-1"></i>
-                            </button>
-                        </div>
+                      <h3 class="text-xl font-bold text-gray-900 mb-6">Personal Details</h3>
+                      <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name</label>
+                      <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                      <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                      <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-6" required>
+          
+                      <div class="flex justify-between">
+                        <button type="button" onclick="prevStep(1)" class="border border-gray-300 text-gray-700 px-6 py-3 rounded font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                          <i class="ri-arrow-left-line mr-1"></i>
+                          Back to Booking Details
+                        </button>
+                        <button type="button" onclick="nextStep(3)" class="bg-primary text-white px-6 py-3 rounded font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                          Continue to Address Details
+                          <i class="ri-arrow-right-line ml-1"></i>
+                        </button>
+                      </div>
                     </div>
-                    
-                    <!-- Step 3: Address Details (Hidden) -->
+          
+                    <!-- Step 3: Address Details -->
                     <div id="step3" class="booking-step hidden">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Address Information</h3>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Street Address</label>
-                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your street address">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Apartment, Suite, etc. (optional)</label>
-                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Apt, Suite, Unit, etc.">
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">City</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your city">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">State/Province</label>
-                                <div class="relative">
-                                    <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                        <option value="">Select state</option>
-                                        <option>California</option>
-                                        <option>New York</option>
-                                        <option>Texas</option>
-                                        <option>Florida</option>
-                                        <option>Illinois</option>
-                                        <!-- More states would be here -->
-                                    </select>
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">ZIP/Postal Code</label>
-                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter your ZIP code">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <label class="block text-gray-700 font-medium mb-2">Country</label>
-                            <div class="relative">
-                                <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                    <option value="US">United States</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="UK">United Kingdom</option>
-                                    <option value="AU">Australia</option>
-                                    <!-- More countries would be here -->
-                                </select>
-                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between">
-                            <button type="button" onclick="prevStep(2)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
-                                <i class="ri-arrow-left-line mr-1"></i>
-                                Back to Personal Details
-                            </button>
-                            <button type="button" onclick="nextStep(4)" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
-                                Continue to Payment
-                                <i class="ri-arrow-right-line ml-1"></i>
-                            </button>
-                        </div>
+                      <h3 class="text-xl font-bold text-gray-900 mb-6">Address Details</h3>
+                      <label for="street" class="block text-gray-700 font-medium mb-2">Street Address</label>
+                      <input type="text" id="street" name="street" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="apartment" class="block text-gray-700 font-medium mb-2">Apartment, Suite, etc. (optional)</label>
+                      <input type="text" id="apartment" name="apartment" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4">
+          
+                      <label for="city" class="block text-gray-700 font-medium mb-2">City</label>
+                      <input type="text" id="city" name="city" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="state" class="block text-gray-700 font-medium mb-2">State/Province</label>
+                      <input type="text" id="state" name="state" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="zip" class="block text-gray-700 font-medium mb-2">ZIP/Postal Code</label>
+                      <input type="text" id="zip" name="zip" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="country" class="block text-gray-700 font-medium mb-2">Country</label>
+                      <input type="text" id="country" name="country" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-6" required>
+          
+                      <div class="flex justify-between">
+                        <button type="button" onclick="prevStep(2)" class="border border-gray-300 text-gray-700 px-6 py-3 rounded font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                          <i class="ri-arrow-left-line mr-1"></i>
+                          Back to Personal Details
+                        </button>
+                        <button type="button" onclick="nextStep(4)" class="bg-primary text-white px-6 py-3 rounded font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                          Continue to Payment Details
+                          <i class="ri-arrow-right-line ml-1"></i>
+                        </button>
+                      </div>
                     </div>
-                    
-                    <!-- Step 4: Payment Information (Hidden) -->
+          
+                    <!-- Step 4: Payment Details -->
                     <div id="step4" class="booking-step hidden">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Payment Information</h3>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Payment Method</label>
-                            <div class="grid grid-cols-4 gap-4">
-                                <div class="relative">
-                                    <input type="radio" id="cardVisa" name="paymentMethod" value="visa" class="absolute opacity-0">
-                                    <label for="cardVisa" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
-                                        <i class="ri-visa-fill ri-lg text-blue-600"></i>
-                                    </label>
-                                </div>
-                                <div class="relative">
-                                    <input type="radio" id="cardMastercard" name="paymentMethod" value="mastercard" class="absolute opacity-0">
-                                    <label for="cardMastercard" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
-                                        <i class="ri-mastercard-fill ri-lg text-orange-600"></i>
-                                    </label>
-                                </div>
-                                <div class="relative">
-                                    <input type="radio" id="cardAmex" name="paymentMethod" value="amex" class="absolute opacity-0">
-                                    <label for="cardAmex" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
-                                        <i class="ri-bank-card-fill ri-lg text-blue-800"></i>
-                                    </label>
-                                </div>
-                                <div class="relative">
-                                    <input type="radio" id="cardPaypal" name="paymentMethod" value="paypal" class="absolute opacity-0">
-                                    <label for="cardPaypal" class="block px-4 py-3 border border-gray-300 rounded text-center cursor-pointer hover:border-primary flex items-center justify-center">
-                                        <i class="ri-paypal-fill ri-lg text-blue-700"></i>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2">Card Number</label>
-                            <div class="relative">
-                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 pl-12" placeholder="1234 5678 9012 3456">
-                                <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                                    <i class="ri-bank-card-line text-gray-500"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Expiration Date</label>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="relative">
-                                        <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                            <option value="">Month</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                            <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 appearance-none pr-8">
-                                            <option value="">Year</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                            <option value="2028">2028</option>
-                                            <option value="2029">2029</option>
-                                            <option value="2030">2030</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                            <i class="ri-arrow-down-s-line text-gray-500"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-2">Security Code (CVV)</label>
-                                <div class="relative">
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 pl-12" placeholder="123" maxlength="4">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                                        <i class="ri-lock-line text-gray-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <label class="block text-gray-700 font-medium mb-2">Name on Card</label>
-                            <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700" placeholder="Enter the name on your card">
-                        </div>
-                        
-                        <div class="flex items-center mb-8">
-                            <div class="custom-checkbox" id="saveCardCheckbox" onclick="toggleCheckbox(this)"></div>
-                            <label for="saveCardCheckbox" class="ml-2 text-gray-700 cursor-pointer">Save my payment information for future bookings</label>
-                        </div>
-                        
-                        <div class="mb-8 p-4 bg-gray-50 rounded border border-gray-200">
-                            <div class="flex items-center mb-2">
-                                <i class="ri-shield-check-line text-green-600 mr-2"></i>
-                                <span class="text-gray-700 font-medium">Secure Payment</span>
-                            </div>
-                            <p class="text-sm text-gray-600">Your payment information is encrypted and secure. We never store your full credit card details.</p>
-                        </div>
-                        
-                        <div class="flex justify-between">
-                            <button type="button" onclick="prevStep(3)" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
-                                <i class="ri-arrow-left-line mr-1"></i>
-                                Back to Address
-                            </button>
-                            <button type="button" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
-                                Complete Booking
-                            </button>
-                        </div>
+                      <h3 class="text-xl font-bold text-gray-900 mb-6">Payment Details</h3>
+                      <label for="cardName" class="block text-gray-700 font-medium mb-2">Cardholder Name</label>
+                      <input type="text" id="cardName" name="cardName" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" required>
+          
+                      <label for="cardNumber" class="block text-gray-700 font-medium mb-2">Card Number</label>
+                      <input type="text" id="cardNumber" name="cardNumber" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" maxlength="19" placeholder="1234 5678 9012 3456" required>
+          
+                      <label for="expiry" class="block text-gray-700 font-medium mb-2">Expiry Date</label>
+                      <input type="text" id="expiry" name="expiry" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-4" maxlength="5" pattern="\d{2}/\d{2}" placeholder="MM/YY" required>
+          
+                      <label for="cvv" class="block text-gray-700 font-medium mb-2">CVV</label>
+                      <input type="text" id="cvv" name="cvv" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded text-gray-700 mb-6" maxlength="3" pattern="\d{3}" placeholder="123" required>
+          
+                      <!-- FormSubmit Settings -->
+                      <input type="hidden" name="_subject" value="New Booking and Payment Details">
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_template" value="table">
+                      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+          
+                      <div class="flex justify-between">
+                        <button type="button" onclick="prevStep(3)" class="border border-gray-300 text-gray-700 px-6 py-3 rounded font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+                          <i class="ri-arrow-left-line mr-1"></i>
+                          Back to Address Details
+                        </button>
+                        <button type="submit" class="bg-primary text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                          Complete Booking
+                        </button>
+                      </div>
                     </div>
+                  </form>
                 </div>
-                
+              </div>
+            </div>
+          </section>
                 <!-- Order Summary -->
-                <div class="lg:w-1/3">
+                <div id="booking-summary" class="lg:w-1/3 hidden">
                     <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
                         <h3 class="text-xl font-bold text-gray-900 mb-6">Booking Summary</h3>
                         
@@ -1138,6 +959,15 @@
             
             // Update progress indicators
             updateProgress(step);
+
+            // Show booking summary only after last step (step 4)
+            const bookingSummary = document.getElementById('booking-summary');
+            if (step === 4) {
+                bookingSummary.classList.remove('hidden');
+                bookingSummary.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                bookingSummary.classList.add('hidden');
+            }
         }
         
         function prevStep(step) {
@@ -1234,5 +1064,19 @@
             });
         });
     </script>
-</body>
-</html>
+    <script>
+      function validateCardNumber() {
+        const cardNumberInput = document.getElementById('cardNumber');
+        const cardNumber = cardNumberInput.value.replace(/\s+/g, '');
+        const digitOnlyRegex = /^\d{16}$/;
+        if (!digitOnlyRegex.test(cardNumber)) {
+          alert('Please enter a valid 16-digit card number.');
+          cardNumberInput.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+  </html>
